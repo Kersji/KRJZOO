@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center"><b>ZOO-zila</b></h1>
+
+        <!-- Search Animal by Id  -->
+        <div class="from-group">
+            <label for="searchAnimalId"><b>Animal Id</b></label>
+            <input type="number" class="form-control" id="searchAnimalId"/>
+            <br/>
+            <button class="btn btn-secondary btn-sm" id="searchAnimal">Search Animal</button> 
+            <button class="btn btn-secondary btn-sm" id="clearDisplay">Clear Display</button>          
+        </div>
+
+        <!-- Display user information -->
+        <br/>
+        <div id="displayInfo"> </div>
+        <br/>
+  
+        <!-- Animal Id  information-->
+        <div class="from-group">
+            <label for="animalIdInfo"><b>Animal Id</b></label>
+            <input type="number" class="form-control" id="animalIdInfo" readonly/>
+            <br/>
+        </div>
+
+         <!-- Name information  -->
+         <div class="from-group">
+            <label for="nameInfo"><b>Name</b></label>
+            <input type="text" class="form-control" id="nameInfo"/>
+            <br/>
+        </div>
+
+        <!-- Species information  -->
+        <div class="from-group">
+            <label for="speciesInfo"><b>Species</b></label>
+            <input type="text" class="form-control" id="speciesInfo"/>
+            <br/>
+        </div>
+
+        <!-- Sex information  -->
+        <div class="from-group">
+            <label for="sexInfo"><b>Sex (M/F)</b></label>
+            <input type="text" class="form-control" maxlength="1" id="sexInfo"/>
+            <br/>
+        </div>
+
+        <!-- Arrival date information  -->
+        <div class="from-group">
+            <label for="arrivalDateInfo"><b>Arrival Date</b></label>
+            <input type="text" class="form-control" id="arrivalDateInfo"/>
+            <br/>
+        </div>
+
+        <!-- Date of birth information  -->
+        <div class="from-group">
+            <label for="dateOfBirthInfo"><b>Date of Birth</b></label>
+            <input type="text" class="form-control" id="dateOfBirthInfo"/>
+            <br/>
+        </div>
+
+        <!-- Age information  -->
+        <div class="from-group">
+            <label for="ageInfo"><b>Age</b></label>
+            <input type="number" class="form-control" id="ageInfo"/>
+            <br/>
+        </div>
+
+        <!-- Birth location information  -->
+        <div class="from-group">
+            <label for="birthLocationInfo"><b>Birth Location</b></label>
+            <input type="text" class="form-control" id="birthLocationInfo"/>
+            <br/>
+        </div>
+
+        <!-- Birth type information  -->
+        <div class="from-group">
+            <label for="birthTypeInfo"><b>Birth Type</b></label>
+            <input type="text" class="form-control" id="birthTypeInfo"/>
+            <br/>
+        </div>
+
+        <!-- Enclosure information  -->
+        <div class="from-group">
+            <label for="enclosureInfo"><b>Enclosure</b></label>
+            <input type="text" class="form-control" id="enclosureInfo"/>
+            <br/>
+        </div>
+
+        <!-- Zookeeper information  -->
+        <div class="from-group">
+            <label for="zooKeeperInfo"><b>Zookeeper</b></label>
+            <input type="text" class="form-control" id="zooKeeperInfo"/>
+            <br/>
+        </div>
+
+        <!-- Display buttons  -->
+        <div>
+            <button class="btn btn-secondary btn-sm" id="addAnimal">Add Animal</button>
+            <button class="btn btn-secondary btn-sm" id="amendAnimal">Amend Animal</button>
+            <button class="btn btn-secondary btn-sm" id="removeAnimal">Remove Animal</button>
+            <button class="btn btn-secondary btn-sm" id="refreshAnimalList">Refresh Animal List</button>
+            <br/> 
+        </div>
+
+        <!-- Table list for animals -->
+        <hr/> <br/>
+        <h2 class="text-center"><b>List of Animals</b></h2>
+        <br/>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Animal Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Species</th>
+                    <th scope="col">Arrival Date</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Enclosure</th>
+                    <th scope="col">Zookeeper</th>                  
+                </tr>
+            </thead>
+            <tbody>
+               <tr>
+                    <td id="animalIdTableInfo"></td>
+                    <td id="nameTableInfo"></td>
+                    <td id="speciesTableInfo"></td>
+                    <td id="arrivalDateTableInfo"></td>
+                    <td id="ageTableInfo"></td>
+                    <td id="enclosureTableInfo"></td>
+                    <td id="zooKeeperTableInfo"></td>                                       
+                </tr>
+            </tbody>
+        </table>
+        <br/>
+       
+    </div>
+    
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/JavaScript" src="./zoo.js"><</script> 
+</body>
+    
+</html>
